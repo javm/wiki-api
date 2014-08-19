@@ -19,7 +19,17 @@ app.get('/news/:post', function(req, res, next){
 });
 
 app.post('/news/:post', function(req, res, next){
-  
+  console.log(req);
+  var content = req.body.content;
+  var post = req.params.post;
+  var outFile = htmlPath+'/'+post+'.html';
+  fs.writeFile(outFile, content, function (err) {
+    if (err) {
+      console.log(err);
+      res.send(500);
+    }
+    res.send(200);
+  });
 })
 
 

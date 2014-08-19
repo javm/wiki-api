@@ -25,4 +25,16 @@ describe('wiki-api', function(){
       });
   });
 
+  it('puts crash news', function(done){
+    superagent.post('http://localhost:3000/news/Latest_plane_crash')
+      .send({content: '<html><head></head><body>Test</body></html>'})
+      .end(function (err, res){
+	if(err)
+	  console.log(err);
+	console.log(res);
+	done();
+      });
+  });
+
+
 });
