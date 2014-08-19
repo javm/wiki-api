@@ -1,0 +1,26 @@
+{
+  "name": "wiki-api",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "api.js",
+  "scripts": {
+    "start": "node api.js",
+    "test": "mocha api.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javm/wiki-api.git"
+  },
+  "author": "José Antonio Villarreal",
+  "license": "MIT",
+
+  "dependencies": {
+    "express": "~4.1.1",
+    "body-parser": "~1.0.2"
+  },
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "~1.18.2",
+    "superagent": "~0.17.0"
+  }
+}
